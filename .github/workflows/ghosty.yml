@@ -1,0 +1,17 @@
+name: Ghosty Tükör
+
+on:
+  schedule:
+    - cron: '*/1 * * * *' 
+
+jobs:
+  send-message:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Script
+        run: |
+          python3 send_ghosty.py
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
