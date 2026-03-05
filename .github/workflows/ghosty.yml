@@ -22,3 +22,4 @@ jobs:
           python3 send_ghosty.py
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          DUMMY: "activate cron"
