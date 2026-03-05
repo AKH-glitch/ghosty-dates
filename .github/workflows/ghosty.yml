@@ -14,6 +14,8 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           pip install gspread oauth2client requests
-      - name: Run Ghosty Script
+     - name: Run Ghosty Script
         run: |
           python3 send_ghosty.py
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
