@@ -1,10 +1,9 @@
-
 name: Ghosty Tükör
 
 on:
   schedule:
-    # minden percben ellenőrzi az üzeneteket UTC-ben
     - cron: '*/1 * * * *'
+  workflow_dispatch:
 
 jobs:
   send-message:
